@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WaveView">
+        <attr name="waveColor" format="color"/>
+        <attr name="waveAmplitude" format="dimension"/>
+        <attr name="waveSpeed" format="enum">
+            <enum name="low" value="0"/>
+            <enum name="medium" value="1"/>
+            <enum name="high" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

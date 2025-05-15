@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustResize"
+    tools:context=".CategoryItemActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".CategoryItemActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Menu"
+                    android:src="@drawable/ic_dark_main_back" />
+
+                <TextView
+                    android:id="@+id/category_show_heading"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bricolage_bold"
+                    android:gravity="center"
+                    android:text="Recipes"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/black" />
+
+                    <EditText
+                        android:id="@+id/searchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@null"
+                        android:fontFamily="@font/bricolage_regular"
+                        android:hint="Search Food..."
+                        android:minHeight="40dp"
+                        android:paddingLeft="15dp"
+                        android:textColorHint="#757575"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:contentDescription="Scroll container with recipe information">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:shimmer_auto_start="true"
+                        app:shimmer_duration="1000"
+                        app:shimmer_shape="linear">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent">
+
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/shimmer_layout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:layout_margin="8dp"
+                                app:layout_constraintBottom_toTopOf="@+id/shimmer_layout2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0"
+                                app:shimmer_auto_start="true"
+                                app:shimmer_duration="1000">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:layout_margin="8dp"
+                                    app:cardCornerRadius="20dp"
+                                    app:cardElevation="0dp"
+                                    app:cardPreventCornerOverlap="true"
+                                    app:strokeColor="#10000000"
+                                    app:strokeWidth="1dp">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="200dp"
+                                        android:padding="12dp">
+
+                                        <com.facebook.shimmer.ShimmerFrameLayout
+                                            android:id="@+id/shimmer_image1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="82dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:shimmer_auto_start="true"
+                                            app:shimmer_duration="1000"
+                                            app:shimmer_shape="linear"
+                                            tools:ignore="TooDeepLayout">
+                                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                        <View
+                                            android:id="@+id/view1"
+                                            android:layout_width="140dp"
+                                            android:layout_height="16dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="@+id/shimmer_image1"
+                                            app:layout_constraintTop_toBottomOf="@+id/view0"
+                                            app:layout_constraintVertical_bias="1.0" />
+
+                                        <View
+                                            android:id="@+id/view2"
+                                            android:layout_width="140dp"
+                                            android:layout_height="16dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.932"
+                                            app:layout_constraintStart_toEndOf="@+id/view1"
+                                            app:layout_constraintTop_toBottomOf="@+id/view0"
+                                            app:layout_constraintVertical_bias="0.9" />
+
+                                        <View
+                                            android:id="@+id/view3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="130dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <View
+                                            android:id="@+id/view0"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="16dp"
+                                            android:layout_marginTop="4dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/shimmer_layout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:layout_margin="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/shimmer_layout1"
+                                app:layout_constraintVertical_bias="0.0"
+                                app:shimmer_auto_start="true"
+                                app:shimmer_duration="1000">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:layout_margin="8dp"
+                                    app:cardCornerRadius="20dp"
+                                    app:cardElevation="0dp"
+                                    app:cardPreventCornerOverlap="true"
+                                    app:strokeColor="#10000000"
+                                    app:strokeWidth="1dp">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="200dp"
+                                        android:padding="12dp">
+
+                                        <com.facebook.shimmer.ShimmerFrameLayout
+                                            android:id="@+id/shimmer_image2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="82dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:shimmer_auto_start="true"
+                                            app:shimmer_duration="1000"
+                                            app:shimmer_shape="linear">
+                                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                        <View
+                                            android:id="@+id/view4"
+                                            android:layout_width="140dp"
+                                            android:layout_height="16dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="@+id/shimmer_image2"
+                                            app:layout_constraintTop_toBottomOf="@+id/view7"
+                                            app:layout_constraintVertical_bias="1.0" />
+
+                                        <View
+                                            android:id="@+id/view5"
+                                            android:layout_width="140dp"
+                                            android:layout_height="16dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.932"
+                                            app:layout_constraintStart_toEndOf="@+id/view4"
+                                            app:layout_constraintTop_toBottomOf="@+id/view7"
+                                            app:layout_constraintVertical_bias="1.0" />
+
+                                        <View
+                                            android:id="@+id/view6"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="130dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <View
+                                            android:id="@+id/view7"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="16dp"
+                                            android:layout_marginTop="4dp"
+                                            android:background="@color/black"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/recipeContainer"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                    </LinearLayout>-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recipeRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:clipToPadding="false" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <Button
+                            android:id="@+id/previousPage"
+                            android:layout_width="100dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="@color/green_500"
+                            android:drawableLeft="@drawable/ic_previous"
+                            android:drawablePadding="8dp"
+                            android:elevation="4dp"
+                            android:fontFamily="@font/bricolage_medium"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="Prev"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:cornerRadius="20dp"
+                            tools:ignore="RtlHardcoded" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:id="@+id/nextPage"
+                            android:layout_width="100dp"
+                            android:layout_height="48dp"
+                            android:backgroundTint="@color/green_500"
+                            android:drawableRight="@drawable/ic_next"
+                            android:drawablePadding="8dp"
+                            android:elevation="4dp"
+                            android:fontFamily="@font/bricolage_medium"
+                            android:padding="8dp"
+                            android:text="Next"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:cornerRadius="20dp"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/CustomBottomNavigationStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextAppearance="@style/CustomBottomNavTextAppearance"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

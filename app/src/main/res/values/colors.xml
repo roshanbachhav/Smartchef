@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_background">#D00000</color>
+    <color name="default_icon_color">#000000</color>
+    <color name="default_background">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_white">#5F5D5D</color>
+    <color name="white_smoke">#E7E5E5</color>
+    <color name="white_50_percent">#80FFFFFF</color>
+    <color name="gray">#BEBEBE</color>
+
+    <color name="primary_dark">#2A282E</color>
+    <color name="shadow">#66000000</color>
+
+    <color name="primary">#EDE8F5</color>
+    <color name="secondary">#ADBBDA</color>
+    <color name="neutral">#9E9E9E</color>
+    <color name="tertiary">#8697C4</color>
+    <color name="accent">#7091E6</color>
+    <color name="background">#148AEA</color>
+
+    <color name="icon_color">#000000</color>
+
+    <color name="unselected_item_color">#000000</color>
+    <color name="selected_item_color">#FFFFFF</color>
+
+    <color name="surface_variant">#2B2930</color>
+    <color name="surface_container">#36343B</color>
+    <color name="outline_variant">#49454F</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="pink_500">#E91E63</color>
+    <color name="teal_500">#009688</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="dimGold">#F4D475</color>
+    <color name="golden">#FFD700</color>
+    <color name="yellow">#D3E416</color>
+    <color name="soft_yellow">#FFF4CC</color>
+
+    <color name="red_500">#D00000</color>
+    <color name="red_200">#FF5454</color>
+    <color name="red_100">#FFCDD2</color>
+    <color name="green_500">#42D748</color>
+    <color name="soft_green">#DFFFD6</color>
+    <color name="link_blue">#1E90FF</color>
+
+
+    <color name="primary_text">#263238</color>
+    <color name="primary_icon">#5E737E</color>
+    <color name="occasion_stroke">#E0E0E0</color>
+
+    <color name="primary_red">#FF5252</color>
+    <color name="light_red_background">#FFF5F5</color>
+
+    <color name="divider_color">#E0E0E0</color>
+
+    <color name="primary_red_light">#FFF5F5</color>
+    <color name="gray_300">#E0E0E0</color>
+
+    <color name="chip_background_selector">#F04B4B</color>
+    <color name="chip_stroke_selector">#FFF</color>
+
+
+    <color name="primary_color">#F04B4B</color>
+    <color name="primary_color_meal_planner">#F65C6E</color>
+    <color name="primary_light">#9B47FB</color>
+
+    <color name="divider">#EEEEEE</color>
+
+    <color name="chip_selected">#EDE9FE</color>
+    <color name="chip_unselected">#FFFFFF</color>
+
+    <color name="bottom_nav_selected">#FF5722</color>
+    <color name="bottom_nav_unselected">#757575</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="gray_light">#D3D3D3</color>
+
+
+    <!--    Dark Background-->
+    <color name="color_primary">#BB86FC</color>
+    <color name="color_primary_variant">#3700B3</color>
+    <color name="color_secondary">#03DAC6</color>
+    <color name="color_error">#CF6679</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="color_background">#121212</color>
+    <color name="color_surface">#1E1E1E</color>
+    <color name="color_border">#292929</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>            <!-- Titles, headlines -->
+    <color name="text_secondary">#E0E0E0</color>          <!-- Subheadings -->
+    <color name="text_tertiary">#B0B0B0</color>           <!-- Labels, hints -->
+    <color name="text_disabled">#808080</color>           <!-- Inactive states -->
+    <color name="text_inverse">#121212</color>            <!-- For use on light elements -->
+
+<!--     Icon or ripple shades -->
+    <color name="dark_mode_icon_color">#E0E0E0</color>
+    <color name="ripple_color">#33FFFFFF</color>
+
+
+    <!--    Ur Reciptionary-->
+</resources>

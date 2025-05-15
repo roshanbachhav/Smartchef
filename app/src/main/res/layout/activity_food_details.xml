@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".FoodDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sunset_gradient">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:elevation="4dp"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/backButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/circle_gray_bg"
+                            android:contentDescription="@string/menu"
+                            android:src="@drawable/ic_dark_main_back" />
+
+                        <TextView
+                            android:id="@+id/category_show_heading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bricolage_bold"
+                            android:gravity="center"
+                            android:text="@string/food_details"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:id="@+id/foodImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:clipToOutline="true"
+                                android:outlineProvider="background"
+                                android:src="@drawable/image_shimmer" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="top|end"
+                                android:padding="10dp"
+                                android:gravity="end"
+                                android:spacing="10dp">
+
+                                <ImageButton
+                                    android:id="@+id/btnFavorite"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:layout_marginHorizontal="8dp"
+                                    android:background="@drawable/circle_gradient"
+                                    android:src="@drawable/ic_favourite"
+                                    android:contentDescription="@string/like_icon"
+                                    app:tint="@null" />
+
+                                <ImageButton
+                                    android:id="@+id/btnMealPlan"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:background="@drawable/circle_gradient"
+                                    android:src="@drawable/ic_mealplan"
+                                    app:tint="@android:color/black"
+                                    android:contentDescription="@string/like_icon" />
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/foodTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:fontFamily="@font/bricolage_bold"
+                        android:gravity="center"
+                        android:text="Big Burger Sejwan Soup"
+                        android:textColor="@color/black"
+                        android:textSize="26sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:divider="@drawable/divider_vertical"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:showDividers="middle">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_timer"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/prepTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/bricolage_regular"
+                                android:text="5 Min"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_fire"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/calories"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/bricolage_regular"
+                                android:text="35"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_leaf"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/vegType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/bricolage_regular"
+                                android:text="Veg"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/white_smoke"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/instructionsHeader"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:drawablePadding="8dp"
+                                    android:focusable="true"
+                                    android:fontFamily="@font/bricolage_bold"
+                                    android:minHeight="48dp"
+                                    android:paddingStart="16dp"
+                                    android:paddingTop="12dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingBottom="12dp"
+                                    android:text="@string/instructions_steps"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:drawableStartCompat="@drawable/ic_info" />
+
+                                <ImageView
+                                    android:id="@+id/expandCollapseIcon"
+                                    android:layout_width="26dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/ic_plus" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/instructionsExpandableLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="8dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/instructionsText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bricolage_regular"
+                                    android:text="1. Boil pasta. 2. Cook beef with tomato sauce. 3. Combine and serve."
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+
+                                <TextView
+                                    android:id="@+id/stepId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="15dp"
+                                    android:fontFamily="@font/bricolage_regular"
+                                    android:text="Steps"
+                                    android:textColor="@color/red_500"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/white_smoke"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/instructionsHeaderTwo"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:drawablePadding="8dp"
+                                    android:focusable="true"
+                                    android:fontFamily="@font/bricolage_bold"
+                                    android:minHeight="48dp"
+                                    android:paddingStart="16dp"
+                                    android:paddingTop="12dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingBottom="12dp"
+                                    android:text="Ingredients"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:drawableStartCompat="@drawable/ic_ingredient" />
+
+                                <ImageView
+                                    android:id="@+id/expandCollapseIconTwo"
+                                    android:layout_width="26dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/ic_plus" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/instructionsExpandableLayoutTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="8dp"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:divider="@drawable/divider_horizontal"
+                                    android:orientation="vertical"
+                                    android:showDividers="middle">
+
+                                    <LinearLayout
+                                        android:id="@+id/ingredientLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:divider="@drawable/divider_horizontal"
+                                        android:orientation="vertical"
+                                        android:paddingVertical="8dp"
+                                        android:showDividers="middle">
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/white_smoke"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start|center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/instructionsHeaderThree"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:drawablePadding="8dp"
+                                    android:focusable="true"
+                                    android:fontFamily="@font/bricolage_bold"
+                                    android:minHeight="48dp"
+                                    android:paddingStart="16dp"
+                                    android:paddingTop="12dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingBottom="12dp"
+                                    android:text="Nutritions"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:drawableStartCompat="@drawable/ic_nutrition_health" />
+
+                                <ImageView
+                                    android:id="@+id/expandCollapseIconThree"
+                                    android:layout_width="26dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/ic_plus" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/instructionsExpandableLayoutThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="8dp"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:divider="@drawable/divider_horizontal"
+                                    android:orientation="vertical"
+                                    android:showDividers="middle">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingVertical="12dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="Carbs"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/carbsValue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="50g"
+                                            android:textColor="@color/green_500"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingVertical="12dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="Protein"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/proteinValue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="20g"
+                                            android:textColor="@color/blue_500"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingVertical="12dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="Fat"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/fatValue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="15g"
+                                            android:textColor="@color/red_500"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingVertical="12dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="Fiber"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/fiberValue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="5g"
+                                            android:textColor="@color/purple_500"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingVertical="12dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="Sugar"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/sugarValue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="8g"
+                                            android:textColor="@color/pink_500"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingVertical="12dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="Sodium"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/sodiumValue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="250mg"
+                                            android:textColor="@color/teal_500"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:paddingVertical="12dp">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="Cholesterol"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/cholesterolValue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/bricolage_medium"
+                                            android:text="30mg"
+                                            android:textColor="@color/orange_500"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/bricolage_medium"
+                            android:text="Dietary Preferences"
+                            android:textColor="#333333"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <LinearLayout
+                                android:id="@+id/dietLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp" />
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/occasionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Occasion"
+                            android:textColor="@color/primary_text"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/bricolage_medium"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/occasionRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_occasion"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

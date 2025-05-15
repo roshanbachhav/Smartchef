@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/errorToast"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/bg_custom_toast"
+    android:elevation="8dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/errorGif"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/error_gif" />
+
+    <TextView
+        android:id="@+id/errorToastText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/bricolage_semibold"
+        android:text="@string/toast_message"
+        android:textColor="@color/red_500"
+        android:textSize="14sp" />
+</LinearLayout>

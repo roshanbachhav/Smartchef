@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="category_style">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="AppBarElevation" parent="">
+        <item name="android:elevation">4dp</item>
+        <item name="android:translationZ">4dp</item>
+        <item name="android:outlineAmbientShadowColor">@color/shadow</item>
+        <item name="android:outlineSpotShadowColor">@color/shadow</item>
+    </style>
+
+    <style name="ShapeAppearance.M3.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.M3.CornerLarge" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="RecipeCardText" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="CustomBottomNavTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/bricolage_regular</item>
+        <item name="fontFamily">@font/bricolage_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomBottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearance">@style/CustomBottomNavTextAppearance</item>
+        <item name="itemIconSize">18dp</item>
+        <item name="itemBackground">@android:color/transparent</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="RoundedImageView">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="RoundedBox">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="CircleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="FilterChip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:textAppearance">@style/ChipTextAppearance</item>
+        <item name="chipCornerRadius">8dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:textColor">@color/red_500</item>
+        <item name="chipStrokeWidth">1dp</item>    </style>
+
+    <style name="ChipTextAppearance" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:fontFamily">@font/bricolage_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Round" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="RoundedCornerStyle">
+        <item name="shapeAppearanceOverlay">@style/RoundedShape</item>
+    </style>
+
+    <style name="RoundedShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="DrawerMenuItemTextStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/bricolage_medium</item>
+    </style>
+
+    <style name="CustomDrawerNavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">@style/DrawerMenuItemTextStyle</item>
+        <item name="itemIconSize">16dp</item>
+        <item name="itemIconTint">#626262</item>
+        <item name="android:itemBackground">@drawable/menu_item_background</item>
+    </style>
+
+</resources>

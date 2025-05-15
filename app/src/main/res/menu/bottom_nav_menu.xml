@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_smile"
+        android:title=""
+        />
+
+    <item
+        android:id="@+id/cooking"
+        android:icon="@drawable/ic_recipe_bn"
+        android:title=""/>
+
+    <item
+        android:id="@+id/recipe"
+        android:icon="@drawable/ic_recipe"
+        android:title=""/>
+
+    <item
+        android:id="@+id/userProfile"
+        android:icon="@drawable/ic_bottom_user"
+        android:title=""/>
+</menu>
