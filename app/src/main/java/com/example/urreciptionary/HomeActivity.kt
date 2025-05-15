@@ -90,7 +90,7 @@ class HomeActivity : BaseActivity() {
 
         profileImage = findViewById(R.id.profileImage)
         logoutBtn = findViewById(R.id.logout)
-        profileImage.setOnClickListener{
+        profileImage.setOnClickListener {
             val intent = Intent(this, UserProfileActivity::class.java)
             startActivity(intent)
         }
@@ -105,10 +105,10 @@ class HomeActivity : BaseActivity() {
 
             usernameRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    if(snapshot.exists()){
+                    if (snapshot.exists()) {
                         val username = snapshot.getValue(String::class.java)
                         homeUsername.text = username
-                    }else{
+                    } else {
                         homeUsername.text = "SmartChef - User"
                     }
                 }
@@ -124,9 +124,9 @@ class HomeActivity : BaseActivity() {
                 .child(uid)
                 .child("photoUrl")
 
-            photoRef.addListenerForSingleValueEvent(object: ValueEventListener{
+            photoRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    if(snapshot.exists()){
+                    if (snapshot.exists()) {
                         val photoUrl = snapshot.getValue(String::class.java)
                         Glide.with(this@HomeActivity)
                             .load(photoUrl)
@@ -145,7 +145,7 @@ class HomeActivity : BaseActivity() {
             })
         }
 
-        val greeting = when(hour) {
+        val greeting = when (hour) {
             in 0..11 -> "Good Morning!"
             in 12..16 -> "Good Afternoon"
             else -> "\uD83C\uDF19 Good evening"
@@ -220,98 +220,8 @@ class HomeActivity : BaseActivity() {
         }
 
         if (!viewModel.hasLoaded) {
-            viewModel.loadPopularRecipe(apiKey,currentPage,pageSize)
+            viewModel.loadPopularRecipe(apiKey, currentPage, pageSize)
         }
-
-//        val offset = currentPage * pageSize
-//        val call: Call<RecipeResponse> = apiService.getRecipe(
-//            "",
-//            apiKey,
-//            offset,
-//            "popularity"
-//        )
-//        call.enqueue(object : Callback<RecipeResponse> {
-//            override fun onResponse(
-//                call: Call<RecipeResponse>, response: Response<RecipeResponse>
-//            ) {
-//                if (response.isSuccessful) {
-//                    response.body()?.let { recipeResponse ->
-//                        val recipes = recipeResponse.recipes
-//                        if (recipes.isNotEmpty()) {
-//
-//                            val recipeDetailsList = mutableListOf<RecipeWithDetails>()
-//
-//                            for (recipe in recipes) {
-//                                val detailCall: Call<RecipeDetailsResponse> =
-//                                    apiService.getRecipeDetails(recipe.id, apiKey)
-//                                detailCall.enqueue(object : Callback<RecipeDetailsResponse> {
-//                                    override fun onResponse(
-//                                        call: Call<RecipeDetailsResponse>,
-//                                        response: Response<RecipeDetailsResponse>
-//                                    ) {
-//                                        if (response.isSuccessful) {
-//                                            val details = response.body()
-//                                            details?.let {
-//                                                recipeDetailsList.add(
-//                                                    RecipeWithDetails(
-//                                                        recipe.id,
-//                                                        recipe.title,
-//                                                        recipe.image,
-//                                                        it.readyInMinutes,
-//                                                        it.likes
-//                                                    )
-//                                                )
-//                                                if (recipeDetailsList.size == recipes.size) {
-//                                                    recipeAdapter =
-//                                                        PopularRecipeAdapter(recipeDetailsList)
-//                                                    recyclerView.adapter = recipeAdapter
-//
-//                                                    shimmerLayout.visibility = View.GONE
-//                                                    recyclerView.visibility = View.VISIBLE
-//                                                    popularShowMoreText.visibility = View.VISIBLE
-//                                                }
-//                                            }
-//                                        }
-//                                    }
-//
-//                                    override fun onFailure(
-//                                        call: Call<RecipeDetailsResponse>,
-//                                        t: Throwable
-//                                    ) {
-//                                        TODO("Not yet implemented")
-//                                    }
-//
-//                                })
-//                            }
-//
-//                            val smoothScroller = CustomSmoothScroller(this@HomeActivity)
-//                            smoothScroller.targetPosition = 0
-//                            recyclerView.layoutManager?.startSmoothScroll(smoothScroller)
-//                        } else {
-//                            Toast.makeText(
-//                                this@HomeActivity,
-//                                "No recipes found",
-//                                Toast.LENGTH_SHORT
-//                            ).show()
-//                        }
-//                    }
-//                } else {
-//                    Toast.makeText(
-//                        this@HomeActivity,
-//                        "API Error: ${response.code()}",
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<RecipeResponse>, t: Throwable) {
-//                Toast.makeText(
-//                    this@HomeActivity,
-//                    "API call failed: ${t.message}",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
-//        })
     }
 
     override fun onResume() {

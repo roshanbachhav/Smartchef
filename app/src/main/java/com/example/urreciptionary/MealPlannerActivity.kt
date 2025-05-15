@@ -501,7 +501,7 @@ class MealPlannerActivity : BaseActivity() {
                                                         call: Call<NutritionWidgetResponse>,
                                                         t: Throwable
                                                     ) {
-                                                        TODO("Not yet implemented")
+
                                                     }
 
                                                 })
@@ -675,7 +675,6 @@ class MealPlannerActivity : BaseActivity() {
                                                     call: Call<NutritionWidgetResponse>,
                                                     t: Throwable
                                                 ) {
-                                                    TODO("Not yet implemented")
                                                 }
 
                                             })
